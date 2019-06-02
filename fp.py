@@ -125,28 +125,26 @@ def Mine_Tree(FPTree, HeaderTable, minSupport, prefix, frequent_itemset):
         if Conditional_header != None:
             Mine_Tree(Conditional_FPTree, Conditional_header, minSupport, new_frequentset, frequent_itemset)
 
-#to take input of filename and minimum support
-# print("Enter the filename:")
-filename = 'D:/0TUGAS TI/SMT 6/Data Mining/FPGrowth-Algorithm-master/Small_Data.txt'
-# print("Enter the minimum support count:")
-min_Support = 1
-
-initSet = create_initialset(Load_data(filename))
-# print(initSet)
-start = time.time()
-FPtree, HeaderTable = create_FPTree(initSet, min_Support)
-
-print(FPtree, HeaderTable)
-
-frequent_itemset = []
-#call function to mine all ferquent itemsets
-Mine_Tree(FPtree, HeaderTable, min_Support, set([]), frequent_itemset)
-end = time.time()
-
-# print(set)
-FPtree.disp()
-
-print("Time Taken is:")
-print(end-start)
-print("All frequent itemsets:")
-print(frequent_itemset)
+# #to take input of filename and minimum support
+# filename = 'D:/TUGAS/FPGrowth/Small_Data.txt'
+# min_Support = 1
+#
+# initSet = create_initialset(Load_data(filename))
+# # print(initSet)
+# start = time.time()
+# FPtree, HeaderTable = create_FPTree(initSet, min_Support)
+#
+# print(FPtree, HeaderTable)
+#
+# frequent_itemset = []
+# #call function to mine all ferquent itemsets
+# Mine_Tree(FPtree, HeaderTable, min_Support, set([]), frequent_itemset)
+# end = time.time()
+#
+# # print(set)
+# FPtree.disp()
+#
+# print("Time Taken is:")
+# print(end-start)
+# print("All frequent itemsets:")
+# print(frequent_itemset)
